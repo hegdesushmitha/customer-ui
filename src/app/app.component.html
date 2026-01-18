@@ -1,0 +1,11 @@
+<app-customer-list
+  (accountSelected)="selectedAccount = $event">
+</app-customer-list>
+
+<app-customer-details
+  [accountNo]="selectedAccount">
+</app-customer-details>
+
+<app-transactions
+  [accountNo]="selectedAccount">
+</app-transactions>

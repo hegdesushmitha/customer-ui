@@ -35,6 +35,7 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "dist/customer-ui" # Built app content directory - optional
+          app_build_command: "npm run build:azure"
           
           ###### End of Repository/Build Configurations ######
 
@@ -49,4 +50,5 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_COAST_0BAE67D00 }}
           action: "close"
+
 

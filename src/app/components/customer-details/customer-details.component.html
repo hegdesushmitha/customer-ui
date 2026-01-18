@@ -1,0 +1,15 @@
+<h3>Customer Details</h3>
+
+<form [formGroup]="customerForm">
+  <label>Name</label>
+  <input formControlName="name">
+
+  <label>Email</label>
+  <input formControlName="email">
+
+  <label>Account No</label>
+  <input formControlName="accountNo" readonly>
+
+  <label>Status</label>
+  <input formControlName="status">
+</form>

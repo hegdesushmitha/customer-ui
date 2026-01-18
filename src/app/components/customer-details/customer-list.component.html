@@ -1,0 +1,9 @@
+<h3>Customer List</h3>
+<ul>
+  <li *ngFor="let c of customers">
+    {{ c.name }} ({{ c.accountNo }})
+    <button (click)="selectCustomer(c.accountNo)">
+      View
+    </button>
+  </li>
+</ul>

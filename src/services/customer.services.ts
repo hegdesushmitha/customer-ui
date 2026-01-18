@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 export class CustomerService {
 
-  apiUrl = 'https://customer-api-xyz.azurewebsites.net';
+  apiUrl = 'https://customer-api-xyz-f0bsgch3e6bbcxh8.centralindia-01.azurewebsites.net';
 
   constructor(private http: HttpClient) {}
 

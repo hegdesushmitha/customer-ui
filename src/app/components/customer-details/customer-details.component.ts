@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { CustomerService } from '/./src/services/customer.service';
+import { CustomerService } from '/../../services/customer.service';
 
 @Component({
   selector: 'app-customer-details',
@@ -32,7 +32,7 @@ export class CustomerDetailsComponent implements OnChanges {
   ngOnChanges() {
     if (this.accountNo) {
       this.service.getCustomer(this.accountNo)
-        .subscribe(res => {
+        .subscribe(res: any => {
           this.customerForm.patchValue({
             name: res.customerName,
             accountNo: res.accountNumber,

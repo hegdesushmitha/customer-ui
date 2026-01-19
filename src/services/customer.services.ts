@@ -4,19 +4,20 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 export class CustomerService {
 
-  apiUrl = 'https://customer-api-xyz-f0bsgch3e6bbcxh8.centralindia-01.azurewebsites.net';
+  private readonly baseApiUrl =
+    'https://customer-api-xyz-f0bsgch3e6bbcxh8.centralindia-01.azurewebsites.net';
 
   constructor(private http: HttpClient) {}
 
   getCustomer(accountNo: string) {
     return this.http.get<any>(
-      `${this.apiUrl}/api/customers/${accountNo}`
+      `${this.baseApiUrl}/api/customers/${accountNo}`
     );
   }
 
   getTransactions(accountNo: string) {
     return this.http.get<any[]>(
-      `${this.apiUrl}/api/transactions/${accountNo}`
+      `${this.baseApiUrl}/api/transactions/${accountNo}`
     );
   }
 }

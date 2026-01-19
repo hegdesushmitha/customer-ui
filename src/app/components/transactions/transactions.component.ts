@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CustomerService } from '../../services/customer.service';
+import { CustomerService } from '/./src/services/customer.service';
 
 @Component({
   selector: 'app-transactions',
@@ -26,7 +26,7 @@ import { CustomerService } from '../../services/customer.service';
 export class TransactionsComponent implements OnChanges {
 
   @Input() accountNo!: string;
-  transactions: any[] = [];
+  transactions = [];
 
   constructor(private service: CustomerService) {}
 

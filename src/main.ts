@@ -1,22 +1,19 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
+import { CustomerComponent } from './app/customer.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CustomerComponent],
   template: `
-    <h1>Hello from {{ name }}!</h1>
-    <a target="_blank" href="https://angular.dev/overview">
-      Learn more about Angular
-    </a>
-  `,
+    <h2>Customer Support Portal</h2>
+    <app-customer></app-customer>
+  `
 })
-export class App {
-  name = 'Angular';
-}
+export class App {}
 
 bootstrapApplication(App, {
-  providers: [
-    provideHttpClient()
-  ]
+  providers: [provideHttpClient()]
 });

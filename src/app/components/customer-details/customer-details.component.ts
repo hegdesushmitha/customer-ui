@@ -1,9 +1,15 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CustomerService } from '../../services/customer.service';
 
 @Component({
   selector: 'app-customer-details',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule 
+  ],
   templateUrl: './customer-details.component.html'
 })
 export class CustomerDetailsComponent implements OnChanges {

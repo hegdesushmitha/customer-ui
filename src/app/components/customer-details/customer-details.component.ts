@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { CustomerService } from '../../services/customer.service';
+import { CustomerService } from '/./src/services/customer.service';
 
 @Component({
   selector: 'app-customer-details',

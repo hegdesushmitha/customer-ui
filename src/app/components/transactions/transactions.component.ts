@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CustomerService } from '/./src/services/customer.service';
+import { CustomerService } from '/../../services/customer.service';
 
 @Component({
   selector: 'app-transactions',
@@ -33,7 +33,7 @@ export class TransactionsComponent implements OnChanges {
   ngOnChanges() {
     if (this.accountNo) {
       this.service.getTransactions(this.accountNo)
-        .subscribe(res => this.transactions = res);
+        .subscribe(res:any => this.transactions = res);
     }
   }
 }
